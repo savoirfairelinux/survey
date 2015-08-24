@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<openerp>
+  <data>
+
+    <record id="res_partner_form_view" model="ir.ui.view">
+      <field name="model">res.partner</field>
+      <field name="inherit_id" ref="base.view_partner_form"/>
+      <field name="arch" type="xml">
+
+        <div name="buttons" position="inside">
+          <button class="oe_inline oe_stat_button"
+                  icon="fa-edit"
+                  name="%(action_survey_user_input_button_list)d"
+                  context="{'active_id': id,}"
+                  type="action">
+            <field string="Survey Answers" name="survey_user_input_count" widget="statinfo"/>
+          </button>
+
+        </div>
+
+      </field>
+    </record>
+
+  </data>
+</openerp>
